@@ -1,0 +1,19 @@
+<div class= "dv" ng-controller="ResumeCtrl">
+  <h1>All resumes</h1>
+  <form ng-submit="addResume()">
+    <input type="text" ng-model="newResume.name">
+    <input type="submit" value="Add">
+  </form>
+  <hr/>
+  <table class="resumes">
+    <tbody>
+      <tr ng-repeat="r in resumes">
+        <td>
+          {{r.name}}
+          <a ng-click="removeResume(r)" class="btn btn-danger">X</a>
+          <br/><br/>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
